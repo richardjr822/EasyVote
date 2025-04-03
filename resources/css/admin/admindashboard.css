@@ -1,0 +1,349 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background-color: #000;
+    color: white;
+    min-height: 99vh;
+    padding: 20px;
+    position: fixed;
+    border-radius: 30px;
+    margin: -8px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sidebar img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 10px 35px;
+    margin: 10px 10px 10px;
+    background-color: #D3D3D3;
+    border-radius: 15px;
+    color: black;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.menu-item:hover {
+    background-color: #DC5F00;
+    color: white;
+}
+
+.menu-item i {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.menu-item span {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Logout Button */
+.logout {
+    padding: 6px 5px 5px;
+    background-color: #D3D3D3;
+    color: black;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 50px;
+}
+
+.logout:hover {
+    background-color: #DC5F00;
+    color: white;
+}
+
+.logout i {
+    font-size: 18px;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+    flex: 1;
+    background-image: url('/images/phoenix.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 1;
+}
+
+.main-content * {
+    position: relative;
+    z-index: 2;
+}
+
+/* Cards */
+.card {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    text-align: center;
+    height: 105%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgba(211, 211, 211, 0.299);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card .logo-container {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-top: 15px;
+}
+
+.card .logo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 15px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    font-size: 14px;
+    color: #555;
+    margin: 15px 0;
+}
+
+.manage-election-btn {
+    background-color: #DC5F00;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.manage-election-btn i {
+    margin-right: 5px;
+    font-size: 18px;
+}
+
+.manage-election-btn:hover {
+    background-color: #c44e00;
+}
+
+/* Footer */
+.footer {
+    background-color: #000;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.footer .date-time {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+.footer .date-time i {
+    margin-right: 5px;
+    font-size: 16px;
+}
+
+.menu-item.active {
+    background-color: #DC5F00; /* Active background color */
+    color: white; /* Active text color */
+}
+
+/* Modal Styles */
+.modal-dialog.modal-lg {
+    max-width: 750px; /* Smaller modal width */
+}
+
+.modal-content {
+    background-color: #D9D9D9; /* Light gray background */
+    border-radius: 15px;
+    overflow: hidden;
+    padding: 20px; /* Added padding for better spacing */
+}
+
+.modal-header {
+    border-bottom: none; /* Removed border for a cleaner look */
+    padding: 0; /* Removed padding to eliminate unnecessary space */
+}
+
+.modal-title {
+    font-size: 18px; /* Slightly smaller title font size */
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.modal-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0; /* Reduced padding to minimize empty space */
+}
+
+.left-section {
+    width: 30%; /* Left section width */
+}
+
+.right-section {
+    width: 70%; /* Right section width */
+}
+
+.logo-circle {
+    width: 120px; /* Smaller logo circle */
+    height: 120px;
+    border-radius: 50%;
+    background-color: #f8f9fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #ddd;
+}
+
+.logo-circle img {
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 50%;
+}
+
+.btn-orange {
+    background-color: #DC5F00;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-orange i {
+    margin-right: 5px;
+    font-size: 16px;
+}
+
+.btn-orange:hover {
+    background-color: #c44e00;
+}
+
+.modal-body .form-label {
+    font-weight: 600;
+}
+
+.modal-body .input-group {
+    max-width: 250px; /* Reduced width for input fields */
+}
+
+.modal-body .form-select {
+    max-width: 250px; /* Reduced width for dropdown */
+}
+
+/* Adjustments for Buttons */
+.left-section .btn-orange {
+    margin-top: 10px; /* Push the "View Candidates" button slightly downward */
+}
+
+.right-section .btn-orange {
+    display: flex;
+    justify-content: center; /* Ensure the button is centered */
+    align-items: center;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .modal-dialog.modal-lg {
+        max-width: 90%; /* Adjust modal width for smaller screens */
+    }
+
+    .modal-body {
+        flex-direction: column; /* Stack sections vertically */
+        align-items: center;
+    }
+
+    .left-section,
+    .right-section {
+        width: 100%; /* Full width for both sections */
+    }
+
+    .logo-circle {
+        width: 100px; /* Smaller logo circle for mobile */
+        height: 100px;
+    }
+
+    .btn-orange {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
